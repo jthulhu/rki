@@ -1,0 +1,21 @@
+[package]
+name = "rki"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+chrono = { version = "0.4.38", default-features = false, features = ["clock", "now", "std"] }
+clap = { version = "4.5.8", features = ["derive"] }
+gtk = { version = "0.8.2", package = "gtk4", features = ["v4_14"] }
+image = { version = "0.25.1", features = ["avif-native"] }
+libavif-image = "0.14.0"
+rand = "0.8.5"
+
+[dependencies.relm4]
+version = "0.8.1"
+default-features = false
+features = ["macros"]
+
+[dependencies.gdk4]
+version = "0.8"
+features = ["v4_6"]
