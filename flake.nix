@@ -47,8 +47,8 @@
         defaultPackage = naerskLib.buildPackage {
           pname = "redac";
           root = ./.;
-          nativeBuildDependencies = build-dependencies;
-          buildInputs = with pkgs; [ libavif meson ];
+          nativeBuildInputs = with pkgs; [ pkg-config ];
+          buildInputs = with pkgs; [ gtk4 ];
         };
         defaultApp = utils.lib.mkApp {
           drv = self.defaultPackage.${system};
